@@ -1,4 +1,4 @@
-name = "cloudflare-docker-proxy"
+name = "cloudflare-docker-proxy-1"
 compatibility_date = "2023-12-01"
 
 [dev]
@@ -11,15 +11,15 @@ MODE = "debug"
 TARGET_UPSTREAM = "https://registry-1.docker.io"
 
 [env.production]
-name = "cloudflare-docker-proxy"
+name = "cloudflare-docker-proxy-1"
 routes = [
-  { pattern = "docker.lixd.xyz", custom_domain = true },
-  { pattern = "quay.lixd.xyz", custom_domain = true },
-  { pattern = "gcr.lixd.xyz", custom_domain = true },
-  { pattern = "k8s-gcr.lixd.xyz", custom_domain = true },
-  { pattern = "k8s.lixd.xyz", custom_domain = true },
-  { pattern = "ghcr.lixd.xyz", custom_domain = true },
-  { pattern = "cloudsmith.lixd.xyz", custom_domain = true },
+  { pattern = "docker.dcesg.cn", custom_domain = true },
+  { pattern = "quay.dcesg.cn", custom_domain = true },
+  { pattern = "gcr.dcesg.cn", custom_domain = true },
+  { pattern = "k8s-gcr.dcesg.cn", custom_domain = true },
+  { pattern = "k8s.dcesg.cn", custom_domain = true },
+  { pattern = "ghcr.dcesg.cn", custom_domain = true },
+  { pattern = "cloudsmith.dcesg.cn", custom_domain = true },
 ]
 
 [env.production.vars]
@@ -28,7 +28,7 @@ TARGET_UPSTREAM = ""
 
 [env.staging]
 name = "cloudflare-docker-proxy-staging"
-route = { pattern = "docker-staging.lixd.xyz", custom_domain = true }
+route = { pattern = "docker-staging.dcesg.cn", custom_domain = true }
 
 [env.staging.vars]
 MODE = "staging"
